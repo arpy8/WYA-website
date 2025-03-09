@@ -2,15 +2,27 @@
 import Image from "astro/components/Image.astro";
 import Section from "./Section.astro";
 import brand from "../../assets/icon.png";
+import Squares from "../react/Squares";
 ---
 
 <Section id="home">
+  <div class="fixed inset-0 -z-10">
+    <Squares
+      client:load
+      speed={0.5}
+      squareSize={40}
+      direction="diagonal"
+      borderColor="#333"
+      hoverFillColor="#222"
+    />
+  </div>
+  
   <div class="flex flex-col items-center justify-center min-h-screen text-center">
-    <Image 
-      src={brand} 
-      alt="Brand Logo" 
-      class="w-[180px] animate-[spin_3s_infinite]" 
-      loading="eager" 
+    <Image
+      src={brand}
+      alt="Brand Logo"
+      class="w-[180px] animate-fade-in"
+      loading="eager"
     />
     <h1 class="text-white text-4xl font-bold py-12 animate-fade-in">
       Coming Soon!
@@ -22,19 +34,30 @@ import brand from "../../assets/icon.png";
   .grid-template {
     grid-template-rows: auto 1fr;
   }
-  
+
   body {
     background-color: #030712;
   }
 
   @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   @keyframes pulse-slow {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.05); }
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
   }
 
   .animate-fade-in {

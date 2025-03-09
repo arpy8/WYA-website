@@ -2,7 +2,7 @@
 import { Image } from "astro:assets";
 import Facebook from "../../assets/facebook.svg";
 import Linkedin from "../../assets/linkedin.svg";
-import Logo from "../../assets/logo-alt.svg";
+import Logo from "../../assets/logo.png";
 import Twitter from "../../assets/twitter.svg";
 import ShortForm from "../ui/ShortForm.astro";
 
@@ -32,7 +32,11 @@ const links = [
         >
           <picture>
             <a href="#home">
-              <Image src={Logo} alt="Logo for Kreatif Brand" />
+              <Image
+                src={Logo}
+                alt="Logo for Kreatif Brand"
+                class={"w-[160px]"}
+              />
             </a>
           </picture>
           <ul class="flex flex-col sm:flex-row gap-5">
@@ -88,13 +92,7 @@ const links = [
       <div
         class="flex flex-col lg:flex-row h-20 justify-center mt-4 text-center md:justify-between md:mt-0"
       >
-        <span
-          >2024 Positivus - Made With <a
-            class="underline"
-            target="_blank"
-            href="https://astro.build/">Astro</a
-          ></span
-        >&nbsp
+        <span>2025 WY@!</span>&nbsp
         <span>
           <a
             href="https://www.olgaskuja.design/"

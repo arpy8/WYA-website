@@ -6,15 +6,47 @@ import brand from "../../assets/icon.png";
 
 <Section id="home">
   <div class="flex flex-col items-center justify-center min-h-screen text-center">
-    <Image src={brand} alt="Brand Logo" class="w-[180px]" loading="eager" />
-    <h1 class="text-white py-12">Coming Soon!</h1>
+    <Image 
+      src={brand} 
+      alt="Brand Logo" 
+      class="w-[180px] animate-[spin_3s_infinite]" 
+      loading="eager" 
+    />
+    <h1 class="text-white text-4xl font-bold py-12 animate-fade-in">
+      Coming Soon!
+    </h1>
   </div>
 </Section>
+
 <style>
   .grid-template {
     grid-template-rows: auto 1fr;
   }
+  
   body {
     background-color: #030712;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes pulse-slow {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+  }
+
+  .animate-fade-in-delay {
+    animation: fadeIn 1s ease-out 0.5s forwards;
+    opacity: 0;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse-slow 3s ease-in-out infinite;
   }
 </style>

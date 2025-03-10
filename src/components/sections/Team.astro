@@ -3,8 +3,7 @@ import SectionTitle from "../ui/SectionTitle.astro";
 import TeamCard from "../ui/TeamCard.astro";
 import Section from "./Section.astro";
 
-const description =
-  "Meet the skilled and experienced team behind our successful digital marketing strategies";
+const description = "Meet our team of talented individuals who are passionate about building the best products for you.";
 
 import {
   default as p1,
@@ -19,51 +18,11 @@ const team = [
   {
     pic: p1,
     name: "Arpit Sengar",
-    role: "CEO",
+    role: "Developer",
     description:
-      "In my healing era",
-    link: "https://linkedin.com/in/arpitsengar",
+      "uhh yeah it's just me for now, do let me know if you wanna join the team!",
+    linkedin: "https://linkedin.com/in/arpitsengar",
   },
-  // {
-  //   pic: p2,
-  //   name: "Maria Katz",
-  //   role: "CEO",
-  //   description:
-  //     "3+ years of experience in paid search advertising. Skilled in campaign management and performance analysis",
-  //   link: "https://linkedin.com",
-  // },
-  // {
-  //   pic: p3,
-  //   name: "Maria Katz",
-  //   role: "CEO",
-  //   description:
-  //     "3+ years of experience in paid search advertising. Skilled in campaign management and performance analysis",
-  //   link: "https://linkedin.com",
-  // },
-  // {
-  //   pic: p4,
-  //   name: "Maria Katz",
-  //   role: "CEO",
-  //   description:
-  //     "3+ years of experience in paid search advertising. Skilled in campaign management and performance analysis",
-  //   link: "https://linkedin.com",
-  // },
-  // {
-  //   pic: p5,
-  //   name: "Maria Katz",
-  //   role: "CEO",
-  //   description:
-  //     "3+ years of experience in paid search advertising. Skilled in campaign management and performance analysis",
-  //   link: "https://linkedin.com",
-  // },
-  // {
-  //   pic: p6,
-  //   name: "Maria Katz",
-  //   role: "CEO",
-  //   description:
-  //     "3+ years of experience in paid search advertising. Skilled in campaign management and performance analys",
-  //   link: "https://linkedin.com",
-  // },
 ];
 ---
 
@@ -71,7 +30,7 @@ const team = [
   <div class="mt-[140px]">
     <SectionTitle sectionTitle="Team" description={description} />
     <div
-      class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 grid-rows-2 gap-10"
+      class="grid gap-10"
     >
       {
         team.map((member, index) => (
@@ -81,13 +40,15 @@ const team = [
             name={member.name}
             role={member.role}
             description={member.description}
-            link={member.link}
+            link={member.linkedin}
           />
         ))
       }
     </div>
     <div class="flex justify-end mt-10">
-      <button class="btn-primary">See all team</button>
+      <a href="https://github.com/arpy8/WYA/graphs/contributors" target="_blank" rel="noopener noreferrer">
+        <button class="btn-primary">See contributors</button>
+      </a>
     </div>
   </div>
 </Section>

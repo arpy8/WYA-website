@@ -1,23 +1,25 @@
 ---
 import { Image } from "astro:assets";
-import Facebook from "../../assets/facebook.svg";
+import Mail from "../../assets/gmail.svg";
 import Linkedin from "../../assets/linkedin.svg";
+import Github from "../../assets/github.svg";
 import Logo from "../../assets/logo.png";
 import Twitter from "../../assets/twitter.svg";
 import ShortForm from "../ui/ShortForm.astro";
 
 const logos = [
-  { name: "Facebook", src: Facebook, link: "https://facebook.com" },
-  { name: "Linkedin", src: Linkedin, link: "https://linkedin.com" },
-  { name: "Twitter", src: Twitter, link: "https://twitter.com" },
+  { name: "Github", src: Github, link: "https://github.com/arpy8/WYA" },
+  { name: "Linkedin", src: Linkedin, link: "https://linkedin.com/in/arpitsengar" },
+  // { name: "Twitter", src: Twitter, link: "https://twitter.com" },
+  { name: "Mail", src: Mail, link: "mailto:arpitsengar99@gmail.com" },
 ];
 
 const links = [
   { name: "About us", href: "#about" },
   { name: "Services", href: "#services" },
   { name: "Use Cases", href: "#cases" },
-  { name: "Pricing", href: "#Testimonials" },
-  { name: "Blog", href: "#Home" },
+  // { name: "Pricing", href: "#Testimonials" },
+  // { name: "Blog", href: "#Home" },
 ];
 ---
 
@@ -36,7 +38,8 @@ const links = [
                 src={Logo}
                 alt="Logo for Kreatif Brand"
                 class={"w-[160px]"}
-              />
+                height={50}
+                />
             </a>
           </picture>
           <ul class="flex flex-col sm:flex-row gap-5">
@@ -59,7 +62,7 @@ const links = [
                   <li>
                     <a href={logo.link} target="_blank">
                       <picture>
-                        <Image src={logo.src} alt={logo.name} />
+                        <Image src={logo.src} alt={logo.name} class="w-[32px]" />
                       </picture>
                     </a>
                   </li>
@@ -69,16 +72,16 @@ const links = [
           </ul>
         </div>
 
-        <div class="flex flex-col lg:flex-row mt-[66px] mb-[51px]">
+        <!-- <div class="flex flex-col lg:flex-row mt-[66px] mb-[51px]">
           <div
             class="flex text-center lg:text-start flex-col w-full lg:w-[30%]"
           >
             <h3 class="mb-5">Contact us:</h3>
             <div class="flex flex-col justify-between gap-4">
-              <span> Email: examplemail.com </span>
-              <span> Phone: +123 456 789 </span>
+              <span> Email: arpitsengar99@gmail.com</span>
               <span class="lg:w-3/4">
-                Address: 1234 Street Name, City Name, Country Name
+                VIT Bhopal University, Kotri Kalan, Ashta, Bhopal, Madhya
+                Pradesh 466114
               </span>
             </div>
           </div>
@@ -86,11 +89,11 @@ const links = [
             <ShortForm />
           </div>
         </div>
-      </div>
+      </div> -->
 
-      <div class="h-[1px] bg-white mb-5"></div>
-      <div
-        class="flex flex-col lg:flex-row h-20 justify-center mt-4 text-center md:justify-between md:mt-0"
+      <div class="h-[1px] bg-white mt-12"></div>
+      <!-- <div
+        class="flex flex-col lg:flex-row justify-center mt-8 text-center md:justify-between md:mt-8"
       >
         <span>2025 WY@!</span>&nbsp
         <span>
@@ -98,14 +101,15 @@ const links = [
             href="https://www.olgaskuja.design/"
             target="_blank"
             class="underline">Credit (Olga Skuja)</a
-          ><span> &</span>
+          >
+          <span> &</span>
           <a
             class="underline"
             href="https://creativecommons.org/licenses/by/4.0/"
             target="_blank">Licence</a
           >
         </span>
-      </div>
+      </div> -->
     </div>
   </div>
 </section>

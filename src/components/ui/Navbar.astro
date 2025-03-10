@@ -7,12 +7,12 @@ const navLinks = [
     href: "#about",
   },
   {
-    name: "Services",
-    href: "#services",
+    name: "Features",
+    href: "#features",
   },
   {
-    name: "Use cases",
-    href: "#cases",
+    name: "FAQs",
+    href: "#faqs",
   },
   {
     name: "Testimonials",
@@ -29,7 +29,7 @@ import brand from "../../assets/logo.png";
 ---
 
 <div
-  class="bg-[#fff] fixed w-full top-0 z-10 py-[30px] h-auto flex justify-center"
+  class="bg-[#fff] fixed w-full top-0 z-10 py-[30px] h-auto flex justify-center border-b-[1px] border-[#292929] px-4"
 >
   <nav
     aria-label="Main Navigation"
@@ -66,7 +66,14 @@ import brand from "../../assets/logo.png";
 
       <!-- Login -->
       <div class="flex xl:flex-row xl:items-center px-4 xl:gap-4 flex-col">
-        <button class="btn-secondary">Request a quote</button>
+        <a
+          href="https://github.com/arpy8/wya/releases"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-full md:w-auto"
+        >
+          <button class="btn-primary">Download APK</button>
+        </a>
       </div>
     </div>
 

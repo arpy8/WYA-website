@@ -1,0 +1,24 @@
+---
+import SectionTitle from "../ui/SectionTitle.astro";
+import MoitvationCard from "../ui/MoitvationCard.astro";
+import Section from "./Section.astro";
+
+const card = {
+  index: 1,
+  desc: "The thing is, I don't like walking alone.",
+  alt: "",
+};
+---
+
+<Section id="motivation">
+  <div class="my-[70px]">
+    <SectionTitle sectionTitle="Project Motivation" />
+    <div class="grid gap-10">
+      <MoitvationCard
+        index={card.index}
+        desc={card.desc}
+        alt={card.alt}
+      />
+    </div>
+  </div>
+</Section>

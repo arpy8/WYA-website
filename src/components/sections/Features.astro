@@ -1,6 +1,6 @@
 ---
 import SectionTitle from "../ui/SectionTitle.astro";
-import ServiceCard from "../ui/ServiceCard.astro";
+import ServiceCard from "../ui/MoitvationCard.astro";
 import Section from "./Section.astro";
 
 import c1 from "../../assets/pics/card-pic1.png";
@@ -13,71 +13,57 @@ import c6 from "../../assets/pics/card-pic6.png";
 const cards = [
   {
     index: 1,
-    titleTop: "Search Engine",
-    titleBottom: "Optimization",
+    titleTop: "Some Feature 1",
+    // titleBottom: "Optimization",
     img: c1,
     alt: "SEO",
     link: "https://google.com",
+    desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime, quia.",
   },
   {
     index: 2,
-    titleTop: "Pay-per-click",
-    titleBottom: "advertising",
+    titleTop: "Some Feature 2",
+    // titleBottom: "advertising",
     img: c2,
     alt: "SEO",
     link: "https://google.com",
+    desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime, quia.",
   },
   {
     index: 3,
-    titleTop: "Social Media",
-    titleBottom: "Marketing",
+    titleTop: "Some Feature 3",
+    // titleBottom: "Marketing",
     img: c3,
     alt: "SEO",
     link: "https://google.com",
+    desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime, quia.",
   },
   {
     index: 1,
-    titleTop: "Email",
-    titleBottom: "Marketing",
-    img: c4,
+    titleTop: "Some Feature 4",
+    // titleBottom: "Marketing",
+    img: c3,
     alt: "SEO",
     link: "https://google.com",
-  },
-  {
-    index: 2,
-    titleTop: "Content",
-    titleBottom: "Creation",
-    img: c5,
-    alt: "SEO",
-    link: "https://google.com",
-  },
-  {
-    index: 3,
-    titleTop: "Analytics and",
-    titleBottom: "Tracking",
-    img: c6,
-    alt: "SEO",
-    link: "https://google.com",
+    desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime, quia.",
   },
 ];
 
-const description =
-  "At our digital marketing agency, we offer a range of services to help businesses grow and succeed online. These services include";
+const description = "Let's discuss some of the features";
 ---
 
 <Section id="features">
-  <div class="mt-[140px] mb-5">
+  <div class="my-[70px]">
     <SectionTitle sectionTitle="Features" description={description} />
-    <div class="grid lg:grid-cols-2 lg:grid-rows-3 gap-10">
+    <div class="grid lg:grid-cols-2 gap-10">
       {
         cards.map((card) => (
           <ServiceCard
             index={card.index}
             titleTop={card.titleTop}
-            titleBottom={card.titleBottom}
             img={card.img}
             alt={card.alt}
-            link={card.link}
+            desc={card.desc}
           />
         ))
       }

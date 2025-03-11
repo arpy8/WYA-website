@@ -12,7 +12,7 @@ import {
   default as p4,
   default as p5,
   default as p6,
-} from "../../assets/pics/profile-pic.png";
+} from "../../assets/pics/profile-pic-2.png";
 
 const team = [
   {
@@ -20,14 +20,15 @@ const team = [
     name: "Arpit Sengar",
     role: "Developer",
     description:
-      "uhh yeah it's just me for now, do let me know if you wanna join the team!",
+      "Hey there I'm using Whatsapp",
     linkedin: "https://linkedin.com/in/arpitsengar",
+    github: "https://github.com/arpy8",
   },
 ];
 ---
 
 <Section id="about">
-  <div class="mt-[140px]">
+  <div class="my-[70px]">
     <SectionTitle sectionTitle="Team" description={description} />
     <div
       class="grid gap-10"
@@ -40,7 +41,8 @@ const team = [
             name={member.name}
             role={member.role}
             description={member.description}
-            link={member.linkedin}
+            linkedin={member.linkedin}
+            github={member.github}
           />
         ))
       }

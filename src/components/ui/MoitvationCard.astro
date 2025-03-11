@@ -11,7 +11,7 @@ import wob from "../../assets/icon7.svg";
 3. Black card with white title and white on black icon
 */
 
-const { index, titleTop, titleBottom, img, alt, link } = Astro.props;
+const { index, titleTop, titleBottom, img, alt, link, desc } = Astro.props;
 ---
 
 <Card isUnderline={true}>
@@ -22,25 +22,36 @@ const { index, titleTop, titleBottom, img, alt, link } = Astro.props;
       <span class=`w-[fit-content] ${index === 1 ? 'greenhead' : 'whitehead'}`
         >{titleTop}</span
       >
-      <span class=`w-[fit-content] ${index === 1 ? 'greenhead' : 'whitehead'}`
+      <span
+        class=`w-[fit-content] ${index === 1 ? 'greenhead' : 'whitehead'} mt-1`
         >{titleBottom}</span
       >
+      <span
+        class="text-base mt-5"
+      >{desc}</span>
     </h3>
     <picture
-      class="w-full h-full row-span-1 order-1 lg:order-none lg:row-span-2 flex justify-center items-center"
-    >
-      <Image
-        src={img}
-        alt={alt}
-        class="h-[100px] w-auto sm:h-auto sm:w-3/4 object-cover"
-      />
+      class=`w-full h-full row-span-1 order-1 lg:order-none ${link?'lg:row-span-2':''} flex justify-center items-center`
+      >{
+        img && (
+          <Image
+            src={img}
+            alt={alt}
+            class="h-[100px] w-auto sm:h-auto sm:w-3/4 object-cover"
+          />
+        )
+      }
     </picture>
-    <div class="flex items-end">
-      <a href={link} class="flex items-center gap-3.5"
-        ><Image src={index === 1 || index === 2 ? gob : wob} alt={alt} />
-        <span class="hidden sm:block">Service Info</span></a
-      >
-    </div>
+    {
+      link && (
+        <div class="flex items-end">
+          <a href={link} class="flex items-center gap-3.5">
+            <Image src={index === 1 || index === 2 ? gob : wob} alt={alt} />
+            <span class="hidden sm:block">Service Info</span>
+          </a>
+        </div>
+      )
+    }
   </div>
 </Card>
 

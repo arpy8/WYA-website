@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import HeroIlust from "../../assets/pics/hero-pic.png";
+import HeroIlust from "../../assets/pics/hero-pic-2.png";
 import Section from "./Section.astro";
 ---
 
@@ -11,7 +11,7 @@ import Section from "./Section.astro";
     <div class="flex flex-col w-full lg:w-[66.5%]">
       <h1>Navigating the digital landscape for success</h1>
     </div>
-    <picture class="row-span-1 md:row-span-3">
+    <picture class="hidden md:flex row-span-1 md:row-span-3 justify-end items-center">
       <Image src={HeroIlust} alt="Hero Ilustration" loading="eager" />
     </picture>
     <div class="w-full lg:w-[66.5%]">
